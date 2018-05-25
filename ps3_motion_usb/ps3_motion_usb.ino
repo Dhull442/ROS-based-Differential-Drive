@@ -177,6 +177,9 @@ void loop() {
 }
 void kangaroo_speed_direction()
 { double rotfac;
+  double sign = 1;
+  if (ry <= 0)
+    sign = -1;
   if (l2 == 0)
   { spd1m = spd1 / 5;
     spd2m = spd2 / 5;
@@ -191,18 +194,21 @@ void kangaroo_speed_direction()
     spd1m *= rotfac;
     spd2m *= -rotfac;
   }
+  ry /= 128;
   double fac = 0;
-  spd1 *= (ry / 128);
-  spd2 *= (ry / 128);
+  spd1 *= sign * (ry * ry);
+  spd2 *= sign * (ry * ry);
+
   lx -= 128;
   fac = lx / 128;
-  if( fac >= 0)
-  {spd1 = (1 + fac*fac) / 2 * spd1 + spd1m ;
-  spd2 = (1 - fac*fac) / 2 * spd2 + spd2m ;}
-  else if(fac < 0)
-  { spd1 = (1 - fac*fac) / 2 * spd1 + spd1m ;
-  spd2 = (1 + fac*fac) / 2 * spd2 + spd2m ;    
-    }
+  if ( fac >= 0)
+  { spd1 = (1 + fac * fac) / 2 * spd1 + spd1m ;
+    spd2 = (1 - fac * fac) / 2 * spd2 + spd2m ;
+  }
+  else if (fac < 0)
+  { spd1 = (1 - fac * fac) / 2 * spd1 + spd1m ;
+    spd2 = (1 + fac * fac) / 2 * spd2 + spd2m ;
+  }
   K1.s(spd1).wait();
   K2.s(spd2).wait();
 
