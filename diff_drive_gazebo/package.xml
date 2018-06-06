@@ -3,10 +3,10 @@
   <name>diff_drive_gazebo</name>
   <version>0.0.0</version>
   <description>The urdf_sim_tutorial package</description>
-  <author email="abc@gmail.com">David V. Lu!!</author>
+  <author email="abc@gmail.com">Vishal</author>
  
 
-  <maintainer email="abu@gmail.com">David V. Lu!!</maintainer>
+  <maintainer email="abu@gmail.com">Vishal</maintainer>
 
   <license>TODO</license>
 
