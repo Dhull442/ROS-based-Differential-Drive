@@ -7,5 +7,5 @@ _Robotics Club, IIT Delhi_
 * The Harr Cascade Classifier of the OpenCV framework of Python3 are used in the project to detect, recognize and track a person. New data given is entered using Machine Learning Techniques.
 
 ### Team Members:
-[Saksham Dhull](https://github.com/Dhull442), [Kunal Gupta](https://github.com/the-wizard-of-shock), [Vishal Verma](https://github.com/Lucifer9934) 
+[Saksham Dhull](https://github.com/Dhull442), [Kunal Gupta](https://github.com/the-wizard-of-shock), [Vishal Verma](https://github.com/Lucifer9934) <br />
 Mentored by: Abhay Saxena, Arjun Bhardwaj.
